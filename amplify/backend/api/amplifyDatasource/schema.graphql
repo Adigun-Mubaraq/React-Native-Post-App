@@ -1,0 +1,12 @@
+type Post @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  title: String!
+  status: PostStatus!
+  rating: Int
+  content: String
+}
+
+enum PostStatus {
+  ACTIVE
+  INACTIVE
+}
